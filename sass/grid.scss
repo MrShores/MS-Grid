@@ -5,8 +5,8 @@
 // Grid widths, columns, spacing
 
 $max_width:             1000px; // width of the container
-$container_padding:     15px;  // padding outside of the container
-$gutter:                15px;  // space between the columns
+$container_padding:     15px;   // padding outside of the container
+$gutter:                15px;   // space between the columns
 $columns:               12;     // number of columns
 
 // Media query settings
@@ -15,6 +15,13 @@ $breakpoint_small:      560px;
 $breakpoint_medium:     780px;
 
 // Mixins etc.
+
+@mixin container {
+    padding-left: $container_padding;
+    padding-right: $container_padding;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @mixin col_center {
     margin-left: auto;
@@ -47,11 +54,8 @@ $breakpoint_medium:     780px;
 ------------------------------------------------------------------------------*/
 
 .container {
+    @include container;
     max-width: $max_width;
-    padding-left: $container_padding;
-    padding-right: $container_padding;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .row {
@@ -64,6 +68,11 @@ $breakpoint_medium:     780px;
         clear: both;
     }
 }
+
+.container-full {
+    @include container;
+}
+
 
 [class*="col_"] {
     padding-left: $gutter;

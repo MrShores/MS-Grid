@@ -13,8 +13,25 @@
 ## <a name="markup"></a>The Markup
 
 ```
+// Standard grid layout
+
 <div class="container">
-    <-- Standard grid layout -->
+    <div class="row">
+        <div class="col_4">
+            Content goes here...
+        </div>
+        <div class="col_4">
+            Content goes here...
+        </div>
+        <div class="col_4">
+            Content goes here...
+        </div>
+    </div>
+</div>
+
+// Full width container
+
+<div class="container-full">
     <div class="row">
         <div class="col_4">
             Content goes here...
