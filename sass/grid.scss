@@ -2,7 +2,7 @@
     :: Settings
 ------------------------------------------------------------------------------*/
 
-// Media query settings
+// Grid widths, columns, spacing
 
 $max_width:             1000px; // width of the container
 $container_padding:     15px;  // padding outside of the container
@@ -11,8 +11,8 @@ $columns:               12;     // number of columns
 
 // Media query settings
 
-$breakpoint_small:       560px;
-$breakpoint_medium:      780px;
+$breakpoint_small:      560px;
+$breakpoint_medium:     780px;
 
 // Mixins etc.
 
