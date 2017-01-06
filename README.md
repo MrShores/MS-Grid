@@ -10,7 +10,7 @@
 2. [Settings](#settings)
 3. [Helper Classes](#helper)
 
-## The Markup <a name="markup"></a>
+## <a name="markup"></a>The Markup
 
 ```
 <div class="container">
@@ -29,7 +29,7 @@
 </div>
 ```
 
-## Settings <a name="settings"></a>
+## <a name="settings"></a>Settings
 
 **MS Grid** is configurable using SASS variables. Just change values and recompile the SASS to CSS.
 
@@ -47,7 +47,7 @@ $breakpoint_small:      560px;  // smallest breakpoint
 $breakpoint_medium:     780px;  // medium breakpoint
 ```
 
-## Helper Classes <a name="helper"></a>
+## <a name="helper"></a>Helper Classes
 
 <dl>
     <dt><code>.col_hide</code></dt>
