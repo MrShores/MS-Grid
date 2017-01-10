@@ -1,1 +1,414 @@
-.container{padding-left:15px;padding-right:15px;margin-left:auto;margin-right:auto;max-width:1000px}.row{margin-left:-15px;margin-right:-15px}.row:after{content:"";display:block;clear:both}.container-full{padding-left:15px;padding-right:15px;margin-left:auto;margin-right:auto}[class*="col_"]{padding-left:15px;padding-right:15px;box-sizing:border-box}.col_pad{padding-left:15px;padding-right:15px;box-sizing:border-box}.col_1,.col_m_1{float:none}.col_2,.col_m_2{float:none}.col_3,.col_m_3{float:none}.col_4,.col_m_4{float:none}.col_5,.col_m_5{float:none}.col_6,.col_m_6{float:none}.col_7,.col_m_7{float:none}.col_8,.col_m_8{float:none}.col_9,.col_m_9{float:none}.col_10,.col_m_10{float:none}.col_11,.col_m_11{float:none}.col_12,.col_m_12{float:none}.col_s_1{width:8.33333%;float:left}.col_s_2{width:16.66667%;float:left}.col_s_3{width:25%;float:left}.col_s_4{width:33.33333%;float:left}.col_s_5{width:41.66667%;float:left}.col_s_6{width:50%;float:left}.col_s_7{width:58.33333%;float:left}.col_s_8{width:66.66667%;float:left}.col_s_9{width:75%;float:left}.col_s_10{width:83.33333%;float:left}.col_s_11{width:91.66667%;float:left}.col_s_12{width:100%;float:left}@media screen and (max-width: 560px){.col_s_center{margin-left:auto;margin-right:auto;clear:both;float:none}.s_hide{position:absolute;left:-9999px}}@media screen and (min-width: 560px){.col_m_1{width:8.33333%;float:left}.col_m_2{width:16.66667%;float:left}.col_m_3{width:25%;float:left}.col_m_4{width:33.33333%;float:left}.col_m_5{width:41.66667%;float:left}.col_m_6{width:50%;float:left}.col_m_7{width:58.33333%;float:left}.col_m_8{width:66.66667%;float:left}.col_m_9{width:75%;float:left}.col_m_10{width:83.33333%;float:left}.col_m_11{width:91.66667%;float:left}.col_m_12{width:100%;float:left}}@media screen and (min-width: 560px) and (max-width: 780px){.col_m_center{margin-left:auto;margin-right:auto;clear:both;float:none}.m_hide{position:absolute;left:-9999px}}@media screen and (min-width: 780px){.col_1{width:8.33333%;float:left}.col_2{width:16.66667%;float:left}.col_3{width:25%;float:left}.col_4{width:33.33333%;float:left}.col_5{width:41.66667%;float:left}.col_6{width:50%;float:left}.col_7{width:58.33333%;float:left}.col_8{width:66.66667%;float:left}.col_9{width:75%;float:left}.col_10{width:83.33333%;float:left}.col_11{width:91.66667%;float:left}.col_12{width:100%;float:left}.col_offset_1{margin-left:8.33333%}.col_offset_2{margin-left:16.66667%}.col_offset_3{margin-left:25%}.col_offset_4{margin-left:33.33333%}.col_offset_5{margin-left:41.66667%}.col_offset_6{margin-left:50%}.col_offset_7{margin-left:58.33333%}.col_offset_8{margin-left:66.66667%}.col_offset_9{margin-left:75%}.col_offset_10{margin-left:83.33333%}.col_offset_11{margin-left:91.66667%}.col_offset_12{margin-left:100%}.col_center{margin-left:auto;margin-right:auto;clear:both;float:none}.col_hide{position:absolute;left:-9999px}}
+/*------------------------------------------------------------------------------
+    :: MS GRID - https://github.com/MrShores/MS-Grid
+------------------------------------------------------------------------------*/
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container-full {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class*="col_"] {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.col_pad {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+/*------------------------------------------------------------------------------
+    :: Mobile Grid
+------------------------------------------------------------------------------*/
+/**
+ * Stack middle and desktop grid columns
+*/
+.col_1,
+.col_m_1 {
+  float: none;
+}
+
+.col_2,
+.col_m_2 {
+  float: none;
+}
+
+.col_3,
+.col_m_3 {
+  float: none;
+}
+
+.col_4,
+.col_m_4 {
+  float: none;
+}
+
+.col_5,
+.col_m_5 {
+  float: none;
+}
+
+.col_6,
+.col_m_6 {
+  float: none;
+}
+
+.col_7,
+.col_m_7 {
+  float: none;
+}
+
+.col_8,
+.col_m_8 {
+  float: none;
+}
+
+.col_9,
+.col_m_9 {
+  float: none;
+}
+
+.col_10,
+.col_m_10 {
+  float: none;
+}
+
+.col_11,
+.col_m_11 {
+  float: none;
+}
+
+.col_12,
+.col_m_12 {
+  float: none;
+}
+
+/**
+ * Generate all mobile column width percentages
+ * for column spans 1 through $columns.
+ *
+ * Outputs:
+ *     .col_s_1 {width: 8.333%;}
+ *     .col_s_2 {width: 16.666%;}
+ *     .col_s_3 {width: 25%;}
+*/
+.col_s_1 {
+  width: 8.33333%;
+  float: left;
+}
+
+.col_s_2 {
+  width: 16.66667%;
+  float: left;
+}
+
+.col_s_3 {
+  width: 25%;
+  float: left;
+}
+
+.col_s_4 {
+  width: 33.33333%;
+  float: left;
+}
+
+.col_s_5 {
+  width: 41.66667%;
+  float: left;
+}
+
+.col_s_6 {
+  width: 50%;
+  float: left;
+}
+
+.col_s_7 {
+  width: 58.33333%;
+  float: left;
+}
+
+.col_s_8 {
+  width: 66.66667%;
+  float: left;
+}
+
+.col_s_9 {
+  width: 75%;
+  float: left;
+}
+
+.col_s_10 {
+  width: 83.33333%;
+  float: left;
+}
+
+.col_s_11 {
+  width: 91.66667%;
+  float: left;
+}
+
+.col_s_12 {
+  width: 100%;
+  float: left;
+}
+
+@media screen and (max-width: 560px) {
+  .col_s_center {
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    float: none;
+  }
+
+  .s_hide {
+    position: absolute;
+    left: -9999px;
+  }
+}
+/*------------------------------------------------------------------------------
+    :: Medium Grid
+------------------------------------------------------------------------------*/
+@media screen and (min-width: 560px) {
+  /**
+   * Generate all middle size column width percentages 
+   * for column spans 1 through $columns.
+   *
+   * Outputs:
+   *     .col_m_1 {width: 8.333%;}
+   *     .col_m_2 {width: 16.666%;}
+  */
+  .col_m_1 {
+    width: 8.33333%;
+    float: left;
+  }
+
+  .col_m_2 {
+    width: 16.66667%;
+    float: left;
+  }
+
+  .col_m_3 {
+    width: 25%;
+    float: left;
+  }
+
+  .col_m_4 {
+    width: 33.33333%;
+    float: left;
+  }
+
+  .col_m_5 {
+    width: 41.66667%;
+    float: left;
+  }
+
+  .col_m_6 {
+    width: 50%;
+    float: left;
+  }
+
+  .col_m_7 {
+    width: 58.33333%;
+    float: left;
+  }
+
+  .col_m_8 {
+    width: 66.66667%;
+    float: left;
+  }
+
+  .col_m_9 {
+    width: 75%;
+    float: left;
+  }
+
+  .col_m_10 {
+    width: 83.33333%;
+    float: left;
+  }
+
+  .col_m_11 {
+    width: 91.66667%;
+    float: left;
+  }
+
+  .col_m_12 {
+    width: 100%;
+    float: left;
+  }
+}
+@media screen and (min-width: 560px) and (max-width: 780px) {
+  .col_m_center {
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    float: none;
+  }
+
+  .m_hide {
+    position: absolute;
+    left: -9999px;
+  }
+}
+/*------------------------------------------------------------------------------
+    :: Desktop Grid
+------------------------------------------------------------------------------*/
+@media screen and (min-width: 780px) {
+  /**
+   * Generate all desktop column width percentages 
+   * for column spans 1 through $columns.
+   *
+   * Outputs:
+   *     .col_1 {width: 8.333%;}
+   *     .col_2 {width: 16.666%;}
+  */
+  .col_1 {
+    width: 8.33333%;
+    float: left;
+  }
+
+  .col_2 {
+    width: 16.66667%;
+    float: left;
+  }
+
+  .col_3 {
+    width: 25%;
+    float: left;
+  }
+
+  .col_4 {
+    width: 33.33333%;
+    float: left;
+  }
+
+  .col_5 {
+    width: 41.66667%;
+    float: left;
+  }
+
+  .col_6 {
+    width: 50%;
+    float: left;
+  }
+
+  .col_7 {
+    width: 58.33333%;
+    float: left;
+  }
+
+  .col_8 {
+    width: 66.66667%;
+    float: left;
+  }
+
+  .col_9 {
+    width: 75%;
+    float: left;
+  }
+
+  .col_10 {
+    width: 83.33333%;
+    float: left;
+  }
+
+  .col_11 {
+    width: 91.66667%;
+    float: left;
+  }
+
+  .col_12 {
+    width: 100%;
+    float: left;
+  }
+
+  /**
+   * Generate all offset widths as percentages
+   * for column spans 1 through $columns.
+   *
+   * Outputs:
+   *     .col_offset_1 {margin-left: 8.333%;}
+   *     .col_offset_2 {margin-left: 16.666%;}
+   *     .col_offset_3 {margin-left: 25%;}
+  */
+  .col_offset_1 {
+    margin-left: 8.33333%;
+  }
+
+  .col_offset_2 {
+    margin-left: 16.66667%;
+  }
+
+  .col_offset_3 {
+    margin-left: 25%;
+  }
+
+  .col_offset_4 {
+    margin-left: 33.33333%;
+  }
+
+  .col_offset_5 {
+    margin-left: 41.66667%;
+  }
+
+  .col_offset_6 {
+    margin-left: 50%;
+  }
+
+  .col_offset_7 {
+    margin-left: 58.33333%;
+  }
+
+  .col_offset_8 {
+    margin-left: 66.66667%;
+  }
+
+  .col_offset_9 {
+    margin-left: 75%;
+  }
+
+  .col_offset_10 {
+    margin-left: 83.33333%;
+  }
+
+  .col_offset_11 {
+    margin-left: 91.66667%;
+  }
+
+  .col_offset_12 {
+    margin-left: 100%;
+  }
+
+  .col_center {
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    float: none;
+  }
+
+  .col_hide {
+    position: absolute;
+    left: -9999px;
+  }
+}

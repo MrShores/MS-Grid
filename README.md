@@ -9,6 +9,7 @@
 1. [The Markup](#markup)
 2. [Settings](#settings)
 3. [Helper Classes](#helper)
+4. [Advanced Uses](#advanced)
 
 ## <a name="markup"></a>The Markup
 
@@ -62,6 +63,10 @@ $columns:               12;     // number of columns
 
 $breakpoint_small:      560px;  // smallest breakpoint
 $breakpoint_medium:     780px;  // medium breakpoint
+
+// Namespace
+
+$namespace: "";         // namespace value to prepend all classes
 ```
 
 ## <a name="helper"></a>Helper Classes
@@ -79,3 +84,18 @@ $breakpoint_medium:     780px;  // medium breakpoint
     <dt><code>.col_pad</code></dt>
     <dd>Adds the same padding to an element as used by the columns. Convenient for aligning headers without having to include them in a <code>.row</code> and <code>.col_12</code> markup</dd>
 </dl>
+
+## <a name="advanced"></a>Advanced Uses
+
+### Namespacing
+
+To avoid collisions and conflicts with other libraries, you can prepend a namespace to the entire grid. Use the `$namespace` SASS variable in `sass/grid.scss`. For example:
+
+```
+// SASS variable
+$namespace: "foo_";
+
+// Outputs:
+.foo_col_9
+```
+

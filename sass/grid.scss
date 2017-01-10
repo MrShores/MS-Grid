@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
-    :: Settings
+    ::     :: MS GRID - https://github.com/MrShores/MS-Grid
 ------------------------------------------------------------------------------*/
 
 // Grid widths, columns, spacing
@@ -13,6 +13,10 @@ $columns:               12;     // number of columns
 
 $breakpoint_small:      560px;
 $breakpoint_medium:     780px;
+
+// Namespace
+
+$namespace: "";         // namespace value to prepend all classes
 
 // Mixins etc.
 
@@ -53,12 +57,12 @@ $breakpoint_medium:     780px;
     :: Grid
 ------------------------------------------------------------------------------*/
 
-.container {
+.#{$namespace}container {
     @include container;
     max-width: $max_width;
 }
 
-.row {
+.#{$namespace}row {
     margin-left: -$gutter;
     margin-right: -$gutter;
 
@@ -69,18 +73,18 @@ $breakpoint_medium:     780px;
     }
 }
 
-.container-full {
+.#{$namespace}container-full {
     @include container;
 }
 
 
-[class*="col_"] {
+[class*="#{$namespace}col_"] {
     padding-left: $gutter;
     padding-right: $gutter;
     box-sizing: border-box;
 }
 
-.col_pad {
+.#{$namespace}col_pad {
     padding-left: $gutter;
     padding-right: $gutter;
     box-sizing: border-box;
@@ -94,8 +98,8 @@ $breakpoint_medium:     780px;
  * Stack middle and desktop grid columns
 */
 @for $i from 1 through $columns {
-    .col_#{$i},
-    .col_m_#{$i} {
+    .#{$namespace}col_#{$i},
+    .#{$namespace}col_m_#{$i} {
         float: none;
     }
 }
@@ -110,7 +114,7 @@ $breakpoint_medium:     780px;
  *     .col_s_3 {width: 25%;}
 */
 @for $i from 1 through $columns {
-    .col_s_#{$i} {
+    .#{$namespace}col_s_#{$i} {
         width: column_width($i);
         float: left;
     }
@@ -119,11 +123,11 @@ $breakpoint_medium:     780px;
 // Classes BELOW small breakpoint size
 @media screen and (max-width: $breakpoint_small){
 
-    .col_s_center {
+    .#{$namespace}col_s_center {
         @include col_center;
     }
 
-    .s_hide {
+    .#{$namespace}s_hide {
         @include col_hide;
     }
 }
@@ -144,7 +148,7 @@ $breakpoint_medium:     780px;
      *     .col_m_2 {width: 16.666%;}
     */
     @for $i from 1 through $columns {
-        .col_m_#{$i} {
+        .#{$namespace}col_m_#{$i} {
             width: column_width($i);
             float: left;
         }
@@ -154,11 +158,11 @@ $breakpoint_medium:     780px;
 // Classes BETWEEN small and medium breakpoints
 @media screen and (min-width: $breakpoint_small) and (max-width: $breakpoint_medium){
 
-    .col_m_center {
+    .#{$namespace}col_m_center {
         @include col_center;
     }
 
-    .m_hide {
+    .#{$namespace}m_hide {
         @include col_hide;
     }
 }
@@ -179,7 +183,7 @@ $breakpoint_medium:     780px;
      *     .col_2 {width: 16.666%;}
     */
     @for $i from 1 through $columns {
-        .col_#{$i} {
+        .#{$namespace}col_#{$i} {
             width: column_width($i);
             float: left;
         }
@@ -195,16 +199,16 @@ $breakpoint_medium:     780px;
      *     .col_offset_3 {margin-left: 25%;}
     */
     @for $i from 1 through $columns {
-        .col_offset_#{$i} {
+        .#{$namespace}col_offset_#{$i} {
             margin-left: column_width($i);
         }
     }
 
-    .col_center {
+    .#{$namespace}col_center {
         @include col_center;
     }
 
-    .col_hide {
+    .#{$namespace}col_hide {
         @include col_hide;
     }
 }
